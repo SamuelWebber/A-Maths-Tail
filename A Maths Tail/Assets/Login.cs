@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Login : MonoBehaviour {
     public InputField Username;
@@ -25,6 +26,12 @@ public class Login : MonoBehaviour {
         WWW website = new WWW(LoginURL, form);
         yield return website;
         Debug.Log(website.text);
+        if (website.text.Contains("success"))
+        {
+            string[] fields = website.text.Split(':');
+            int id = int.Parse(fields[1]);
+            PlayerPrefs.SetInt("userID", id);
+        }
     }
 
     public void getUserInfo()
@@ -32,5 +39,10 @@ public class Login : MonoBehaviour {
         string username = Username.text;
         string password = Password.text;
         StartCoroutine(UserLogin(username, password));
+    }
+
+    public void CreateAccount()
+    {
+        SceneManager.LoadScene("Create Account");
     }
 }
