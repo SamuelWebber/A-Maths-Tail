@@ -27,12 +27,12 @@ public class Login : MonoBehaviour {
         form.AddField("passwordPost", password);
         WWW website = new WWW(LoginURL, form);
         yield return website;
-        Debug.Log(website.text);
         if (website.text.Contains("success"))
         {
             string[] fields = website.text.Split(':');
             int id = int.Parse(fields[1]);
             PlayerPrefs.SetInt("userID", id);
+            SceneManager.LoadScene("Select Child");
         } else if (website.text.Contains("user")) {
             message.text = "The user with the name " + username + " does not exist!";
             showPopUp();
