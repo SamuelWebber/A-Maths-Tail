@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class Login : MonoBehaviour {
     public InputField Username;
     public InputField Password;
+    public GameObject popup;
+    public Text message;
     string LoginURL = "https://amathstail.000webhostapp.com/Login.php";
 
     // Use this for initialization
@@ -31,6 +33,13 @@ public class Login : MonoBehaviour {
             string[] fields = website.text.Split(':');
             int id = int.Parse(fields[1]);
             PlayerPrefs.SetInt("userID", id);
+        } else if (website.text.Contains("user")) {
+            message.text = "The user with the name " + username + " does not exist!";
+            showPopUp();
+        } else if (website.text.Contains("password incorrect"))
+        {
+            message.text = "The password did not match the username!";
+            showPopUp();
         }
     }
 
@@ -38,11 +47,28 @@ public class Login : MonoBehaviour {
     {
         string username = Username.text;
         string password = Password.text;
-        StartCoroutine(UserLogin(username, password));
+        if (username != "" && password != "")
+        {
+            StartCoroutine(UserLogin(username, password));
+        } else
+        {
+            message.text = "Username and password fields not completed!";
+            showPopUp();
+        }
     }
 
     public void CreateAccount()
     {
         SceneManager.LoadScene("Create Account");
+    }
+
+    public void showPopUp()
+    {
+        popup.SetActive(true);
+    }
+
+    public void hidePopUp()
+    {
+        popup.SetActive(false);
     }
 }

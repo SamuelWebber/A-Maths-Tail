@@ -88,4 +88,8 @@ public class CreateAccount : MonoBehaviour {
             SceneManager.LoadScene("Login Menu");
         }
     }
+    public void LoginMenu()
+    {
+        SceneManager.LoadScene("Login Menu");
+    }
 }

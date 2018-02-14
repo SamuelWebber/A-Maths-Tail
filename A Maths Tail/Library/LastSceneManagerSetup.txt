@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Create Account.unity
+- path: Assets/Login Menu.unity
   isLoaded: 1
   isActive: 1
