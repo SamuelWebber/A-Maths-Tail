@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using System;
 
 public class SelectChild : MonoBehaviour {
     int parentID;
     public Dropdown child;
+    public GameObject popup;
+    public Text message;
     string GetChildrenURL = "https://amathstail.000webhostapp.com/GetChildren.php";
     List<string> names = new List<string>();
     List<int> ids = new List<int>();
@@ -54,8 +57,27 @@ public class SelectChild : MonoBehaviour {
 
     public void SelectChildUser()
     {
-        string name = child.options[child.value].text;
-        int childID = ids.IndexOf(child.value);
-        int id = ids.ElementAt(child.value);
+        try
+        {
+            string name = child.options[child.value].text;
+            int id = ids.ElementAt(child.value);
+            PlayerPrefs.SetInt("ChildID", id);
+            SceneManager.LoadScene("Child Score Menu");
+        } catch (ArgumentOutOfRangeException) {
+            message.text = "Your account does not link to any child accounts! Please create one first!";
+            showPopUp();
+        }
+        
+        
+    }
+
+    public void showPopUp()
+    {
+        popup.SetActive(true);
+    }
+
+    public void hidePopUp()
+    {
+        popup.SetActive(false);
     }
 }

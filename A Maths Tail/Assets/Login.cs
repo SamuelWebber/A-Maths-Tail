@@ -8,6 +8,7 @@ public class Login : MonoBehaviour {
     public InputField Username;
     public InputField Password;
     public GameObject popup;
+    public GameObject popup2;
     public Text message;
     string LoginURL = "https://amathstail.000webhostapp.com/Login.php";
 
@@ -33,14 +34,19 @@ public class Login : MonoBehaviour {
             string[] fields = website.text.Split(':');
             int id = int.Parse(fields[1]);
             PlayerPrefs.SetInt("userID", id);
-            SceneManager.LoadScene("Select Child");
+            if (website.text.Contains("ParentID")) {
+                SceneManager.LoadScene("Select Child");
+            } else if (website.text.Contains("ChildID")) {
+                PlayerPrefs.SetInt("saves", 1);
+                SceneManager.LoadScene("Main Menu");
+            }
         } else if (website.text.Contains("user")) {
             message.text = "The user with the name " + username + " does not exist!";
-            showPopUp();
+            showPopUp(1);
         } else if (website.text.Contains("password incorrect"))
         {
             message.text = "The password did not match the username!";
-            showPopUp();
+            showPopUp(1);
         }
     }
 
@@ -54,7 +60,7 @@ public class Login : MonoBehaviour {
         } else
         {
             message.text = "Username and password fields not completed!";
-            showPopUp();
+            showPopUp(1);
         }
     }
 
@@ -63,13 +69,31 @@ public class Login : MonoBehaviour {
         SceneManager.LoadScene("Create Account");
     }
 
-    public void showPopUp()
+    public void showPopUp(int popupNumber)
     {
-        popup.SetActive(true);
+        if (popupNumber == 1)
+        {
+            popup.SetActive(true);
+        } else
+        {
+            popup2.SetActive(true);
+        }
     }
 
     public void hidePopUp()
     {
         popup.SetActive(false);
+        popup2.SetActive(false);
+    }
+
+    public void SkipLogin()
+    {
+        if (!popup2.activeInHierarchy) {
+            showPopUp(2);
+        } else {
+            hidePopUp();
+            PlayerPrefs.SetInt("saves", 0);
+            SceneManager.LoadScene("Main Menu");
+        }
     }
 }

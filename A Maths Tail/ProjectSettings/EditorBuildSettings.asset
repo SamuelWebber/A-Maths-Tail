@@ -16,4 +16,13 @@ EditorBuildSettings:
     guid: 9b3aaf7e73de4cb499caa6730e09485c
   - enabled: 1
     path: Assets/Create Child.unity
+    guid: 0f47389aa7560054abbaa1e3f1de249c
+  - enabled: 1
+    path: Assets/Child Score Menu.unity
+    guid: a15c8f69025940d43821a4d18e8a884d
+  - enabled: 1
+    path: Assets/Main Menu.unity
+    guid: 28f6eefb945ea594cb8d56e2c73d37b1
+  - enabled: 1
+    path: Assets/Level Select.unity
     guid: 00000000000000000000000000000000
