@@ -23,11 +23,10 @@ public class CreateAccount : MonoBehaviour {
     void Start () {
 		
 	}
-	
-	// Update is called once per frame
 
     public IEnumerator CreateUser(string title, string firstname, string surname, string email, string telephone, string username, string password)
     {
+        //Set up form to pass to PHP server, then pass to PHP server, respond to PHP server response
         WWWForm form = new WWWForm();
         form.AddField("titlePost",title);
         form.AddField("firstnamePost", firstname);
@@ -39,13 +38,13 @@ public class CreateAccount : MonoBehaviour {
         WWW website = new WWW(createAccountURL,form);
         yield return website;
         if (website.text.Contains("exists")) {
-            message.text = "Username Already Exists!";
+            message.text = "Username already exists!";
             showPopUp();
         } else if (website.text.Contains("error")) {
             message.text = "Error creating user account! Please try again!";
             showPopUp();
         } else if (website.text.Contains("Successful")) {
-            message.text = "Successfully Created User Account!";
+            message.text = "Successfully created user account!";
             showPopUp();
             userCreated = true;
         }
@@ -53,6 +52,7 @@ public class CreateAccount : MonoBehaviour {
 
     public void CreateAccountUser()
     {
+        //Get values from User Interface, then create PHP server request if user interface filled out correctly
         string title = Title.options[Title.value].text;
         string firstname = FirstName.text;
         string surname = Surname.text;

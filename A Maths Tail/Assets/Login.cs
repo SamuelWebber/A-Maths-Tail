@@ -27,6 +27,7 @@ public class Login : MonoBehaviour {
         form.AddField("passwordPost", password);
         WWW website = new WWW(LoginURL, form);
         yield return website;
+        Debug.Log(website.text);
         if (website.text.Contains("success"))
         {
             string[] fields = website.text.Split(':');
