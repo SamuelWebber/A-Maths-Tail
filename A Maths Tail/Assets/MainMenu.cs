@@ -10,12 +10,18 @@ public class MainMenu : MonoBehaviour {
 		
 	}
 	
-
+    //Take the user to the replay puzzle menu
     public void ReplayPuzzle() {
         SceneManager.LoadScene("Level Select");
     }
+
+    //Take the user to the login menu
 	public void SignOut()
     {
         SceneManager.LoadScene("Login Menu");
+    }
+
+    public void NewGame() {
+        SceneManager.LoadScene("Reading Puzzle 1");
     }
 }

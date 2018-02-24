@@ -25,4 +25,7 @@ EditorBuildSettings:
     guid: 28f6eefb945ea594cb8d56e2c73d37b1
   - enabled: 1
     path: Assets/Level Select.unity
-    guid: 00000000000000000000000000000000
+    guid: 95b2d5179398be94aa041e5cb34603f0
+  - enabled: 1
+    path: Assets/Reading Puzzle 1.unity
+    guid: ef06b8b947fdc614ebb6a42c9f53400c
