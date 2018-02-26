@@ -29,6 +29,7 @@ using UnityEngine.UI;
 public class ReadingPuzzleSpeechToText : MonoBehaviour {
     string word;
     string finalText = "";
+    public bool active = false;
     private string _username = "3e053a59-132f-4aa0-ba3f-b791886769eb";
     private string _password = "rgn33MJhVBAZ";
     private string _url = "https://stream.watsonplatform.net/speech-to-text/api";
@@ -50,6 +51,7 @@ public class ReadingPuzzleSpeechToText : MonoBehaviour {
 
         _speechToText = new SpeechToText(credentials);
         Active = true;
+        active = true;
     }
 
     public bool Active
@@ -103,6 +105,7 @@ public class ReadingPuzzleSpeechToText : MonoBehaviour {
     private void OnError(string error)
     {
         Active = false;
+        active = false;
 
         Log.Debug("ExampleStreaming.OnError()", "Error! {0}", error);
     }
