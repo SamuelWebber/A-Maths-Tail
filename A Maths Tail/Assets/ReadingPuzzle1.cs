@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ReadingPuzzle1 : MonoBehaviour {
     public ReadingPuzzleSpeechToText speechToText;
@@ -21,7 +22,6 @@ public class ReadingPuzzle1 : MonoBehaviour {
     public GameObject panel;
     public GameObject panel1;
     public Text message;
-    public Text message2;
     bool isActive = false;
     bool hintAllowed = false;
     Camera maincamera;
@@ -106,10 +106,13 @@ public class ReadingPuzzle1 : MonoBehaviour {
 
     //The user has correctly guessed the word, upload score to database and move to next scene
     public void WordGuessed() {
+        speechToText.StopRecording();
         int saves = PlayerPrefs.GetInt("saves");
         if (saves != 0) {
             int score = (int)(100 - (wrongGuesses / (wrongGuesses + 1)) * 100);
             StartCoroutine(UploadScore(score));
+        } else {
+            ChangeScene();
         }
     }
 
@@ -138,6 +141,11 @@ public class ReadingPuzzle1 : MonoBehaviour {
             WWW website3 = new WWW(updateScoreURL, form3);
             yield return website3;
         }
-        
+        ChangeScene();
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

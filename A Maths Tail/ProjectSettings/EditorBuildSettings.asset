@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Reading Puzzle 1.unity
     guid: ef06b8b947fdc614ebb6a42c9f53400c
+  - enabled: 1
+    path: Assets/Reading Puzzle 2.unity
+    guid: 8481181cec258444ba653f08b9de150c
