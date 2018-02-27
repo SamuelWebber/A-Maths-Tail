@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ReadingPuzzle1 : MonoBehaviour {
     public ReadingPuzzleSpeechToText speechToText;
     double wrongGuesses = 0;
-    string word = "book";
+    public string word;
     int puzzleID = 12;
     string insertScoreURL = "https://amathstail.000webhostapp.com/InsertScore.php";
     string getScoreURL = "https://amathstail.000webhostapp.com/GetScore.php";
@@ -131,14 +131,12 @@ public class ReadingPuzzle1 : MonoBehaviour {
         } else {
             int score2 = int.Parse(website.text);
             int newScore = (score + score2)/2;
-            Debug.Log(score + " " + score2 + " " + newScore);
             WWWForm form3 = new WWWForm();
             form3.AddField("childIDPost", PlayerPrefs.GetInt("userID"));
             form3.AddField("puzzleIDPost", puzzleID);
             form3.AddField("scorePost", newScore);
             WWW website3 = new WWW(updateScoreURL, form3);
             yield return website3;
-            Debug.Log(website3.text);
         }
         
     }
