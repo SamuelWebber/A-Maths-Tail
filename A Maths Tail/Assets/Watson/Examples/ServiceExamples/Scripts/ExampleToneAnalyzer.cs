@@ -22,18 +22,21 @@ using IBM.Watson.DeveloperCloud.Logging;
 using System.Collections;
 using IBM.Watson.DeveloperCloud.Connection;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 public class ExampleToneAnalyzer : MonoBehaviour
 {
-    private string _username = null;
-    private string _password = null;
-    private string _url = null;
+    private string _username = "9e62d186-2f47-420c-b36b-de121c11b5db";
+    private string _password = "GOAQy8Hb1e4H";
+    private string _url = "https://gateway.watsonplatform.net/tone-analyzer/api";
     
     private ToneAnalyzer _toneAnalyzer;
     private string _toneAnalyzerVersionDate = "2017-05-26";
 
-    private string _stringToTestTone = "This service enables people to discover and understand, and revise the impact of tone in their content. It uses linguistic analysis to detect and interpret emotional, social, and language cues found in text.";
+    private string _stringToTestTone = "I hate this game!";
     private bool _analyzeToneTested = false;
+
+    List<string> emotions = new List<string>();
 
     void Start()
     {
@@ -44,8 +47,6 @@ public class ExampleToneAnalyzer : MonoBehaviour
 
         _toneAnalyzer = new ToneAnalyzer(credentials);
         _toneAnalyzer.VersionDate = _toneAnalyzerVersionDate;
-
-        Runnable.Run(Examples());
     }
 
     private IEnumerator Examples()
@@ -63,11 +64,32 @@ public class ExampleToneAnalyzer : MonoBehaviour
     private void OnGetToneAnalyze(ToneAnalyzerResponse resp, Dictionary<string, object> customData)
     {
         Log.Debug("ExampleToneAnalyzer.OnGetToneAnalyze()", "{0}", customData["json"].ToString());
+        string data = customData["json"].ToString();
+        //Parse the json data to extract only the emotions
+        data = Regex.Replace(data, "{\"document_tone\":{\"tone_categories\":", "");
+        data = (data.Split(']'))[0];
+        data = Regex.Replace(data, @"[{\\}]", "");
+        data = (data.Split('['))[2];
+        data = Regex.Replace(data, "\"score\":", "{");
+        data = Regex.Replace(data, "\"tone_id\":", "");
+        data = Regex.Replace(data, "\"tone_id\":", "");
+        data = Regex.Replace(data, "\"tone_name\":", "");
+        data = Regex.Replace(data, ",{", "}:{")+"}";
+        //Seperate the emotions for analysis and store in ArrayList
+        string[] emotionsData = data.Split(':');
+        for (int i = 0; i < emotionsData.Length; i++)
+        {
+            emotions.Add(emotionsData[i]);
+        }
         _analyzeToneTested = true;
     }
 
     private void OnFail(RESTConnector.Error error, Dictionary<string, object> customData)
     {
         Log.Error("ExampleRetrieveAndRank.OnFail()", "Error received: {0}", error.ToString());
+    }
+
+    public List<string> GetEmotions() {
+        return emotions;
     }
 }
