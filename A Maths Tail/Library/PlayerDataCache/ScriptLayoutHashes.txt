@@ -8,6 +8,8 @@ Assets/Child Score Menu.unity
 Assets/Main Menu.unity
 Assets/Level Select.unity
 Assets/Reading Puzzle 1.unity
+Assets/Reading Puzzle 2.unity
+Assets/Escape The Tower Puzzle.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -23,7 +25,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenu
 ab61c69f36f44c393addff939e404e9e Assembly-CSharp.dll:FullSerializer.fsAotConfiguration
-c2fd4dfa2bf5748cc8fca12b0776fab8 Assembly-CSharp.dll:.ReadingPuzzle1
+26ba8d14790c28432d9cc402319cc8ee Assembly-CSharp.dll:.ReadingPuzzle1
 fc662c85e0721e10aff011bb04caf5d4 Assembly-CSharp.dll:.ExampleStreaming
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -121,6 +123,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleNaturalLanguageUnderstanding
+3bf518b97d4a12309aa44fb9f2a0a354 Assembly-CSharp.dll:.MathsPuzzleSpeechToText
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -131,10 +134,12 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleTradeoffAnalytics
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleGetToken
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleTextToSpeech
+18e67a6ed178efddb3b77d97ecdd9131 Assembly-CSharp.dll:.EscapeTheTower
 b1e7ba3e8f0547db898f8e7a8217d391 Assembly-CSharp.dll:IBM.Watson.DeveloperCloud.Editor.UnitTestManager
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleAlchemyLanguage
+563863a5db22be294d19f04faa2dd76d Assembly-CSharp.dll:.PuzzleToneAnalyzer
 fc662c85e0721e10aff011bb04caf5d4 Assembly-CSharp.dll:.ExampleStreamingSplitSamples
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleToneAnalyzer
 1bbdab6d9a50cc284ae76711398acdfa Assembly-CSharp.dll:.CreateAccount

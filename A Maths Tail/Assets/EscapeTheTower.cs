@@ -23,6 +23,7 @@ public class EscapeTheTower : MonoBehaviour {
     public Text textButton1;
     public Text textButton2;
     public GameObject Hint;
+    public GameObject exitPanel;
     int timesClicked = 0;
     double wrongGuesses = 0;
     bool hintAllowed = false;
@@ -161,10 +162,21 @@ public class EscapeTheTower : MonoBehaviour {
     public void hideHint()
     {
         Hint.SetActive(false);
+        exitPanel.SetActive(false);
     }
 
     public void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void exitGame()
+    {
+        exitPanel.SetActive(true);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }

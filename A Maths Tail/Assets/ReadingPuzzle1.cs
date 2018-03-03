@@ -21,6 +21,7 @@ public class ReadingPuzzle1 : MonoBehaviour {
     public Button hint;
     public GameObject panel;
     public GameObject panel1;
+    public GameObject panel2;
     public Text message;
     bool isActive = false;
     bool hintAllowed = false;
@@ -85,6 +86,7 @@ public class ReadingPuzzle1 : MonoBehaviour {
     public void hidePanel() {
         panel.SetActive(false);
         panel1.SetActive(false);
+        panel2.SetActive(false);
     }
 
     //Wrong Button clicked, update wrong guesses
@@ -147,5 +149,15 @@ public class ReadingPuzzle1 : MonoBehaviour {
     public void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void exitGame()
+    {
+        panel2.SetActive(true);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }
