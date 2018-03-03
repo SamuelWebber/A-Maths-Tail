@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Escape The Tower Puzzle.unity
+- path: Assets/Login Menu.unity
   isLoaded: 1
   isActive: 1

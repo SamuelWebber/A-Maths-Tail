@@ -4,6 +4,7 @@ using IBM.Watson.DeveloperCloud.Utilities;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EscapeTheTower : MonoBehaviour {
     public PuzzleToneAnalyzer toneAnalyzer;
@@ -11,12 +12,30 @@ public class EscapeTheTower : MonoBehaviour {
     public Sprite hintAvailable;
     public Sprite hintUnavailable;
     public Button hint;
+    public Text Piece1;
+    public Text Piece2;
+    public Text Piece3;
+    public Text Piece4;
+    public Text Piece5;
+    public Text Piece6;
+    public Text Piece7;
+    public Text Piece8;
+    public Text textButton1;
+    public Text textButton2;
+    public GameObject Hint;
+    int timesClicked = 0;
+    double wrongGuesses = 0;
     bool hintAllowed = false;
     string lasttext = "";
+    int puzzleID = 1;
+    string insertScoreURL = "https://amathstail.000webhostapp.com/InsertScore.php";
+    string getScoreURL = "https://amathstail.000webhostapp.com/GetScore.php";
+    string updateScoreURL = "https://amathstail.000webhostapp.com/UpdateScore.php";
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         toneAnalyzer.StartRecording();
+        textButton1 = Piece1;
     }
 	
 	// Update is called once per frame
@@ -52,5 +71,100 @@ public class EscapeTheTower : MonoBehaviour {
             }
         }
         lasttext = tones.text;
+        if (wrongGuesses >= 3)
+        {
+            hint.image.overrideSprite = hintAvailable;
+            hintAllowed = true;
+        }
 	}
+
+    public void ButtonClicked()
+    {
+        GameObject thisButton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+        Text buttonText = thisButton.GetComponentInChildren<Text>();
+        Debug.Log(buttonText.text);
+        if (timesClicked == 0)
+        {
+            textButton1 = buttonText;
+            timesClicked++;
+            return;
+        } else if (timesClicked == 1)
+        {
+            textButton2 = buttonText;
+            string temp = textButton1.text;
+            textButton1.text = textButton2.text;
+            textButton2.text = temp;
+            timesClicked = 0;
+        }
+    }
+
+    public void CheckCorrect()
+    {
+        if (Piece1.text == "10,000,000" && Piece2.text == "57,237" && Piece3.text == "4,999" && Piece4.text == "CMXCIX" && Piece5.text.Contains("Round 493")
+            && Piece6.text == "13" && Piece7.text == "XII" && Piece8.text == "1") {
+            int saves = PlayerPrefs.GetInt("saves");
+            if (saves != 0)
+            {
+                int score = (int)(100 - (wrongGuesses / (wrongGuesses + 1)) * 100);
+                StartCoroutine(UploadScore(score));
+            } else {
+                ChangeScene();
+            }
+        } else {
+            wrongGuesses++;
+            Debug.Log(wrongGuesses);
+        }
+    }
+
+    //Upload score to the database
+    public IEnumerator UploadScore(int score)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("childIDPost", PlayerPrefs.GetInt("userID"));
+        form.AddField("puzzleIDPost", puzzleID);
+        WWW website = new WWW(getScoreURL, form);
+        yield return website;
+        Debug.Log(website.text);
+        if (website.text.Contains("empty"))
+        {
+            WWWForm form2 = new WWWForm();
+            form2.AddField("childIDPost", PlayerPrefs.GetInt("userID"));
+            form2.AddField("puzzleIDPost", puzzleID);
+            form2.AddField("scorePost", score);
+            WWW website2 = new WWW(insertScoreURL, form2);
+            yield return website2;
+            Debug.Log("inserted" + website2.text);
+        }
+        else
+        {
+            int score2 = int.Parse(website.text);
+            int newScore = (score + score2) / 2;
+            WWWForm form3 = new WWWForm();
+            form3.AddField("childIDPost", PlayerPrefs.GetInt("userID"));
+            form3.AddField("puzzleIDPost", puzzleID);
+            form3.AddField("scorePost", newScore);
+            WWW website3 = new WWW(updateScoreURL, form3);
+            yield return website3;
+            Debug.Log("updated" + website3.text);
+        }
+        ChangeScene();
+    }
+
+    public void showHint()
+    {
+        if (hintAllowed)
+        {
+            Hint.SetActive(true);
+        }
+    }
+
+    public void hideHint()
+    {
+        Hint.SetActive(false);
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
