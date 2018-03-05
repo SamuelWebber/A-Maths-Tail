@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechToText: {fileID: 452182722}
-  word: 
+  word: book
   microphoneActive: {fileID: 21300000, guid: de46db5d9b1cc79458004911b81eff1b, type: 3}
   microphoneInactive: {fileID: 21300000, guid: def33efb9e8f1f94fa156a10d7db55e2, type: 3}
   microphone: {fileID: 1285477936}

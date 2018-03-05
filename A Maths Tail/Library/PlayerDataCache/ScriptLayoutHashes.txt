@@ -25,7 +25,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenu
 ab61c69f36f44c393addff939e404e9e Assembly-CSharp.dll:FullSerializer.fsAotConfiguration
-26ba8d14790c28432d9cc402319cc8ee Assembly-CSharp.dll:.ReadingPuzzle1
+2d51289c4968880d9106568f1724944d Assembly-CSharp.dll:.ReadingPuzzle1
 fc662c85e0721e10aff011bb04caf5d4 Assembly-CSharp.dll:.ExampleStreaming
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -134,7 +134,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleTradeoffAnalytics
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleGetToken
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleTextToSpeech
-18e67a6ed178efddb3b77d97ecdd9131 Assembly-CSharp.dll:.EscapeTheTower
+3a585a33df1a7115605ac720196cf48d Assembly-CSharp.dll:.EscapeTheTower
 b1e7ba3e8f0547db898f8e7a8217d391 Assembly-CSharp.dll:IBM.Watson.DeveloperCloud.Editor.UnitTestManager
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
