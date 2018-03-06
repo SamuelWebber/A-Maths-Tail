@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+    string getLevelURL = "https://amathstail.000webhostapp.com/GetLevel.php";
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -23,5 +23,35 @@ public class MainMenu : MonoBehaviour {
 
     public void NewGame() {
         SceneManager.LoadScene("Reading Puzzle 1");
+    }
+
+    public void LoadGame()
+    {
+        if (PlayerPrefs.GetInt("saves") != 0)
+        {
+            StartCoroutine(GetLevel());
+        }
+    }
+
+    public IEnumerator GetLevel()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("childIDPost", PlayerPrefs.GetInt("userID"));
+        WWW website = new WWW(getLevelURL,form);
+        yield return website;
+        Debug.Log(website.text);
+        if (website.text == "" || website.text == "0")
+        {
+            SceneManager.LoadScene("Reading Puzzle 1");
+        } else {
+            int level = int.Parse(website.text);
+            switch (level)
+            {
+                case 1:
+                    SceneManager.LoadScene("Reading Puzzle 3");
+                    break;
+            }
+        }
+        Debug.Log(website.text);
     }
 }

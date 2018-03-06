@@ -35,3 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escape The Tower Puzzle.unity
     guid: cb76a7770fd60e5469d06525d395caea
+  - enabled: 1
+    path: Assets/Reading Puzzle 3.unity
+    guid: f699f745a4585274e875d3eb745e8f9d
+  - enabled: 1
+    path: Assets/Wall Building.unity
+    guid: 0ba5e081dbc1a0645b52a403017113fb

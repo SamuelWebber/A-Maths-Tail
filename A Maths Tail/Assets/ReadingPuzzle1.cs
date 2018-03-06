@@ -126,6 +126,7 @@ public class ReadingPuzzle1 : MonoBehaviour {
         form.AddField("puzzleIDPost", puzzleID);
         WWW website = new WWW(getScoreURL, form);
         yield return website;
+        Debug.Log(website.text);
         if (website.text.Contains("empty")) {
             WWWForm form2 = new WWWForm();
             form2.AddField("childIDPost", PlayerPrefs.GetInt("userID"));
@@ -133,6 +134,7 @@ public class ReadingPuzzle1 : MonoBehaviour {
             form2.AddField("scorePost", score);
             WWW website2 = new WWW(insertScoreURL, form2);
             yield return website2;
+            Debug.Log(website2.text);
         } else {
             int score2 = int.Parse(website.text);
             int newScore = (score + score2)/2;
@@ -142,6 +144,7 @@ public class ReadingPuzzle1 : MonoBehaviour {
             form3.AddField("scorePost", newScore);
             WWW website3 = new WWW(updateScoreURL, form3);
             yield return website3;
+            Debug.Log(website3.text);
         }
         ChangeScene();
     }

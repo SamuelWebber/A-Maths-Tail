@@ -36,7 +36,6 @@ public class EscapeTheTower : MonoBehaviour {
     // Use this for initialization
     void Start () {
         toneAnalyzer.StartRecording();
-        textButton1 = Piece1;
     }
 	
 	// Update is called once per frame
