@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour {
     public Button level1;
+    public Button level2;
+    public Button level3;
     string getLevelURL = "https://amathstail.000webhostapp.com/GetLevel.php";
     int level = 0;
 
@@ -14,10 +16,6 @@ public class LevelSelect : MonoBehaviour {
         if (PlayerPrefs.GetInt("saves") != 0)
         {
             StartCoroutine(GetLevel());
-            if (level >= 0)
-            {
-                level1.interactable = true;
-            }
         }
     }
 	
@@ -32,7 +30,18 @@ public class LevelSelect : MonoBehaviour {
         {
             level = int.Parse(website.text);
         }
-        Debug.Log(website.text);
+        if (level >= 0)
+            {
+                level1.interactable = true;
+            }
+            if (level >= 1)
+            {
+                level2.interactable = true;
+            }
+            if (level >= 2)
+        {
+            level3.interactable = true;
+        }
     }
 
     public void LoadLevel()
@@ -42,6 +51,14 @@ public class LevelSelect : MonoBehaviour {
         if (levelName == "Level 1")
         {
             SceneManager.LoadScene("Reading Puzzle 1");
+        }
+        if (levelName == "Level 2")
+        {
+            SceneManager.LoadScene("Reading Puzzle 3");
+        }
+        if (levelName == "Level 3")
+        {
+            SceneManager.LoadScene("Multiplication Window");
         }
     }
 

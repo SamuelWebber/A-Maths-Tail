@@ -41,3 +41,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Wall Building.unity
     guid: 0ba5e081dbc1a0645b52a403017113fb
+  - enabled: 1
+    path: Assets/Multiplication Window.unity
+    guid: bf85792a56be5f5459a621587c4d8d68
+  - enabled: 1
+    path: Assets/Reading Puzzle 4.unity
+    guid: d22024bfbe394df48b8118724040a3fa
+  - enabled: 1
+    path: Assets/Barn Building.unity
+    guid: 3ac5ff75cafc71140b5fc647f63d835b
+  - enabled: 1
+    path: Assets/MacDonald's Farm.unity
+    guid: 384c9eaac4746c24bbc4c8ac7ca08f50

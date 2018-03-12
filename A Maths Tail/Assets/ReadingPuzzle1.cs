@@ -161,6 +161,7 @@ public class ReadingPuzzle1 : MonoBehaviour {
 
     public void MainMenu()
     {
+        speechToText.StopRecording();
         SceneManager.LoadScene("Main Menu");
     }
 }

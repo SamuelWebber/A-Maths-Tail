@@ -50,6 +50,12 @@ public class MainMenu : MonoBehaviour {
                 case 1:
                     SceneManager.LoadScene("Reading Puzzle 3");
                     break;
+                case 2:
+                    SceneManager.LoadScene("Multiplication Window");
+                    break;
+                case 3:
+                    SceneManager.LoadScene("Reading Puzzle 4");
+                    break;
             }
         }
         Debug.Log(website.text);
