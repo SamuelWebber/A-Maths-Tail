@@ -89,7 +89,6 @@ public class BarnBuilding : MonoBehaviour {
                 toneAnalyzer.StopRecording();
                 Debug.Log("score saved");
                 int score = (int)((16 / (16 + wrongGuesses)) * 100);
-                //StartCoroutine(UploadScore(score));
                 PlayerPrefs.SetInt("score", score);
                 scoreSaved = true;
             }

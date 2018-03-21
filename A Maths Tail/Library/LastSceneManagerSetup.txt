@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Reading Puzzle 4.unity
+- path: Assets/Recipe Book.unity
   isLoaded: 1
   isActive: 1

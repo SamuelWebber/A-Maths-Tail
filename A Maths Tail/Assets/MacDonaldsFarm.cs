@@ -1,11 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Text.RegularExpressions;
 
 public class MacDonaldsFarm : MonoBehaviour {
     string insertScoreURL = "https://amathstail.000webhostapp.com/InsertScore.php";
     string getScoreURL = "https://amathstail.000webhostapp.com/GetScore.php";
     string updateScoreURL = "https://amathstail.000webhostapp.com/UpdateScore.php";
+    int round = 1;
+    int score = 0;
+    public Text questiontext;
+    public Image question;
+    public Sprite question2;
+    public Sprite question3;
+    public Sprite question4;
+    public Sprite question5;
+    public Button optionA;
+    public Button optionB;
+    public Button optionC;
+    public Button optionD;
+    public Sprite A2;
+    public Sprite B2;
+    public Sprite C2;
+    public Sprite D2;
+    public Sprite A3;
+    public Sprite B3;
+    public Sprite C3;
+    public Sprite D3;
+    public Sprite A4;
+    public Sprite B4;
+    public Sprite C4;
+    public Sprite D4;
+    public Sprite A5;
+    public Sprite B5;
+    public Sprite C5;
+    public Sprite D5;
+    public Text tones;
+    public Sprite hintAvailable;
+    public Sprite hintUnavailable;
+    public Button hint;
+    public GameObject Hint;
+    public GameObject exitPanel;
+    public PuzzleToneAnalyzer toneAnalyzer;
+    bool hintAllowed = false;
+    string lasttext = "";
+    public Text scoreText;
 
     // Use this for initialization
     void Start () {
@@ -13,16 +54,122 @@ public class MacDonaldsFarm : MonoBehaviour {
         if (saves != 0)
         {
             int score = PlayerPrefs.GetInt("score");
-            Debug.Log(score);
-            StartCoroutine(UploadScore(score, 4));
+            if (score <= 100)
+            {
+                Debug.Log(score);
+                StartCoroutine(UploadScore(score, 4));
+            }
         }
         
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        //Only update the hint button, if the last recorded tones has not been analyzed
+        if (tones.text != lasttext && tones.text != "New Text")
+        {
+            string mainEmotion = "";
+            double bestConfidence = 0;
+            Debug.Log(tones.text);
+            //Split the text to receive the seperate emotions
+            string[] emotions = tones.text.Split(':');
+            for (int i = 0; i < emotions.Length; i++)
+            {
+                //Parse the text to a suitable format
+                emotions[i] = Regex.Replace(emotions[i], "{", "");
+                emotions[i] = Regex.Replace(emotions[i], "}", "");
+                //Get the seperate data from each of the emotions
+                string[] emotionData = emotions[i].Split(',');
+                //Get the confidence of the emotion and compare to the last confidence
+                double confidence = double.Parse(emotionData[0]);
+                if (confidence > bestConfidence)
+                {
+                    bestConfidence = confidence;
+                    mainEmotion = emotionData[2];
+                }
+            }
+            //If the overarching emotion is not Joy, then allow the user to have a hint.
+            if (mainEmotion != "\"Joy\"")
+            {
+                hint.image.overrideSprite = hintAvailable;
+                hintAllowed = true;
+            }
+        }
+        lasttext = tones.text;
+    }
+
+    public void SelectedAnswer()
+    {
+        string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
+        if (round == 5)
+        {
+            if (name.Contains("B"))
+            {
+                score += 20;
+            }
+            StartCoroutine(UploadScore(score, 5));
+        }
+        if (round == 4)
+        {
+            question.sprite = question5;
+            optionA.image.overrideSprite = A5;
+            optionB.image.overrideSprite = B5;
+            optionC.image.overrideSprite = C5;
+            optionD.image.overrideSprite = D5;
+            questiontext.text = "5. How many pigs?";
+            round++;
+            if (name.Contains("A"))
+            {
+                score += 20;
+            }
+            scoreText.text = "Score: " + score;
+        }
+        if (round == 3)
+        {
+            question.sprite = question4;
+            optionA.image.overrideSprite = A4;
+            optionB.image.overrideSprite = B4;
+            optionC.image.overrideSprite = C4;
+            optionD.image.overrideSprite = D4;
+            questiontext.text = "4. What is the sequence?";
+            round++;
+            if (name.Contains("A"))
+            {
+                score += 20;
+            }
+            scoreText.text = "Score: " + score;
+        }
+        if (round == 2)
+        {
+            question.sprite = question3;
+            optionA.image.overrideSprite = A3;
+            optionB.image.overrideSprite = B3;
+            optionC.image.overrideSprite = C3;
+            optionD.image.overrideSprite = D3;
+            questiontext.text = "3. How many chickens?";
+            round++;
+            if (name.Contains("B"))
+            {
+                score += 20;
+            }
+            scoreText.text = "Score: " + score;
+        }
+        if (round == 1)
+        {
+            question.sprite = question2;
+            optionA.image.overrideSprite = A2;
+            optionB.image.overrideSprite = B2;
+            optionC.image.overrideSprite = C2;
+            optionD.image.overrideSprite = D2;
+            questiontext.text = "2. How many pigs and chickens?";
+            round++;
+            if (name.Contains("C"))
+            {
+                score += 20;
+            }
+            scoreText.text = "Score: " + score;
+        }
+    }
 
     public IEnumerator UploadScore(int score, int puzzleID)
     {
@@ -55,6 +202,37 @@ public class MacDonaldsFarm : MonoBehaviour {
             yield return website3;
             Debug.Log("updated" + website3.text);
         }
-        //ChangeScene();
+        ChangeScene();
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void showHint()
+    {
+        if (hintAllowed)
+        {
+            Hint.SetActive(true);
+        }
+    }
+
+    public void hideHint()
+    {
+        Hint.SetActive(false);
+        exitPanel.SetActive(false);
+    }
+
+    public void exitGame()
+    {
+        exitPanel.SetActive(true);
+
+    }
+
+    public void MainMenu()
+    {
+        toneAnalyzer.StopRecording();
+        SceneManager.LoadScene("Main Menu");
     }
 }

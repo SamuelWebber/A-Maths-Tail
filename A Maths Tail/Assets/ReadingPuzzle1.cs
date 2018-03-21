@@ -148,17 +148,17 @@ public class ReadingPuzzle1 : MonoBehaviour {
         }
         ChangeScene();
     }
-
+    //Change to the next scene in Build
     public void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
+    //Show panel asking if user wants to exit the game
     public void exitGame()
     {
         panel2.SetActive(true);
     }
-
+    //Stop recording and Go to the main menu screen
     public void MainMenu()
     {
         speechToText.StopRecording();

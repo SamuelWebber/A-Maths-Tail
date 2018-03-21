@@ -176,6 +176,7 @@ public class EscapeTheTower : MonoBehaviour {
 
     public void MainMenu()
     {
+        toneAnalyzer.StopRecording();
         SceneManager.LoadScene("Main Menu");
     }
 }

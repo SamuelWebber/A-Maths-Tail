@@ -56,6 +56,13 @@ public class MainMenu : MonoBehaviour {
                 case 3:
                     SceneManager.LoadScene("Reading Puzzle 4");
                     break;
+                case 4:
+                    SceneManager.LoadScene("MacDonald's Farm");
+                    PlayerPrefs.SetInt("score", 1000);
+                    break;
+                case 5:
+                    SceneManager.LoadScene("Reading Puzzle 5");
+                    break;
             }
         }
         Debug.Log(website.text);

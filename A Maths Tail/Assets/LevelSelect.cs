@@ -8,6 +8,8 @@ public class LevelSelect : MonoBehaviour {
     public Button level1;
     public Button level2;
     public Button level3;
+    public Button level4;
+    public Button level5;
     string getLevelURL = "https://amathstail.000webhostapp.com/GetLevel.php";
     int level = 0;
 
@@ -30,17 +32,22 @@ public class LevelSelect : MonoBehaviour {
         {
             level = int.Parse(website.text);
         }
-        if (level >= 0)
-            {
-                level1.interactable = true;
-            }
-            if (level >= 1)
-            {
-                level2.interactable = true;
-            }
-            if (level >= 2)
-        {
+        if (level >= 0) {
+            level1.interactable = true;
+        }
+        if (level >= 1) {
+            level2.interactable = true;
+        }
+        if (level >= 2) {
             level3.interactable = true;
+        }
+        if (level >= 3)
+        {
+            level4.interactable = true;
+        }
+        if (level >= 4)
+        {
+            level5.interactable = true;
         }
     }
 
@@ -59,6 +66,14 @@ public class LevelSelect : MonoBehaviour {
         if (levelName == "Level 3")
         {
             SceneManager.LoadScene("Multiplication Window");
+        }
+        if (levelName == "Level 4")
+        {
+            SceneManager.LoadScene("Reading Puzzle 4");
+        }
+        if (levelName == "Level 5")
+        {
+            SceneManager.LoadScene("MacDonald's Farm");
         }
     }
 
