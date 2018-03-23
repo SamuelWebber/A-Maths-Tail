@@ -55,6 +55,7 @@ public class PuzzlePiece : MonoBehaviour {
         
     }
 
+    //If idle, change to moving, store current place on the screen
     void OnMouseDown()
     {
         idle = false;
@@ -62,6 +63,7 @@ public class PuzzlePiece : MonoBehaviour {
         inventoryPosition = transform.position;
     }
 
+    //Change pieces position depending on how the mouse was moved
     void inventoryControl()
     {
         if (!locked)
@@ -79,6 +81,7 @@ public class PuzzlePiece : MonoBehaviour {
         }
     }
 
+    //Move piece according to whether the up and down buttons are clicked
     public void MovePiece(bool moveUp)
     {
         if (!locked)

@@ -78,6 +78,7 @@ public class EscapeTheTower : MonoBehaviour {
         }
 	}
 
+    //Get text from the button clicked, and every second click change the text to the other buttons
     public void ButtonClicked()
     {
         GameObject thisButton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
@@ -98,6 +99,7 @@ public class EscapeTheTower : MonoBehaviour {
         }
     }
 
+    //Check whether the text of all buttons is correct
     public void CheckCorrect()
     {
         if (Piece1.text == "10,000,000" && Piece2.text == "57,237" && Piece3.text == "4,999" && Piece4.text == "CMXCIX" && Piece5.text.Contains("Round 493")
@@ -147,9 +149,11 @@ public class EscapeTheTower : MonoBehaviour {
             yield return website3;
             Debug.Log("updated" + website3.text);
         }
+        toneAnalyzer.StopRecording();
         ChangeScene();
     }
 
+    //Show hint to the user if allowed
     public void showHint()
     {
         if (hintAllowed)
@@ -158,22 +162,26 @@ public class EscapeTheTower : MonoBehaviour {
         }
     }
 
+    //Hide all panels from the user
     public void hideHint()
     {
         Hint.SetActive(false);
         exitPanel.SetActive(false);
     }
 
+    //Change the scene to the next scene in build
     public void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    //Show exit panel to the user
     public void exitGame()
     {
         exitPanel.SetActive(true);
     }
 
+    //Go back to main menu
     public void MainMenu()
     {
         toneAnalyzer.StopRecording();

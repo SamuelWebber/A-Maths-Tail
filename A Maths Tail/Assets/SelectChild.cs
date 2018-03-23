@@ -22,16 +22,19 @@ public class SelectChild : MonoBehaviour {
         StartCoroutine(GetChildren());
 	}
 	
+    //Take user to the create child menu
 	public void CreateChild()
     {
         SceneManager.LoadScene("Create Child");
     }
 
+    //Sign the user out to login menu
     public void SignOut()
     {
         SceneManager.LoadScene("Login Menu");
     }
 
+    //Get all children for the parentID from the server database
     public IEnumerator GetChildren()
     {
         //Get all children for the parentID
@@ -55,6 +58,7 @@ public class SelectChild : MonoBehaviour {
         child.AddOptions(names);
     }
 
+    //Select child from the drop down menu to view their scores
     public void SelectChildUser()
     {
         try
@@ -71,11 +75,13 @@ public class SelectChild : MonoBehaviour {
         
     }
 
+    //Show popup to the user
     public void showPopUp()
     {
         popup.SetActive(true);
     }
 
+    //Hide popup from the user
     public void hidePopUp()
     {
         popup.SetActive(false);

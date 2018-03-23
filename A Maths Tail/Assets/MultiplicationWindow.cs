@@ -71,6 +71,7 @@ public class MultiplicationWindow : MonoBehaviour {
         }
     }
 
+    //Check whether all input fields have the correct values in them
     public void CheckCorrect()
     {
         if (value1.text == "39" && value2.text == "2" && value3.text == "37" && value4.text == "481" && value5.text == "962")
@@ -92,6 +93,7 @@ public class MultiplicationWindow : MonoBehaviour {
         }
     }
 
+    //Upload the current score to the server
     public IEnumerator UploadScore(int score)
     {
         WWWForm form = new WWWForm();
@@ -125,6 +127,7 @@ public class MultiplicationWindow : MonoBehaviour {
         ChangeScene();
     }
 
+    //Show hint to the user if allowed
     public void showHint()
     {
         if (hintAllowed)
@@ -133,22 +136,26 @@ public class MultiplicationWindow : MonoBehaviour {
         }
     }
 
+    //Hide all panels from the user
     public void hideHint()
     {
         Hint.SetActive(false);
         exitPanel.SetActive(false);
     }
 
+    //Change to next scene in build
     public void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    //Exit game to the main menu
     public void exitGame()
     {
         exitPanel.SetActive(true);
     }
 
+    //Take the user to the main menu
     public void MainMenu()
     {
         SceneManager.LoadScene("Main Menu");

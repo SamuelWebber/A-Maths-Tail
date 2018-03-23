@@ -76,11 +76,13 @@ public class CreateAccount : MonoBehaviour {
         }
     }
 
+    //Show popup to the user
     public void showPopUp()
     {
         popup.SetActive(true);
     }
 
+    //Hide popup from the user
     public void hidePopUp()
     {
         popup.SetActive(false);
@@ -88,6 +90,8 @@ public class CreateAccount : MonoBehaviour {
             SceneManager.LoadScene("Login Menu");
         }
     }
+
+    //Take user to login menu
     public void LoginMenu()
     {
         SceneManager.LoadScene("Login Menu");

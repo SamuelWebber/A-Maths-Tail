@@ -22,6 +22,7 @@ public class Login : MonoBehaviour {
 		
 	}
 
+    //Create form to pass to the server, pass credentials (username and login), server check credentials, update accordingly to the message sent back
     public IEnumerator UserLogin(string username, string password) {
         WWWForm form = new WWWForm();
         form.AddField("usernamePost", username);
@@ -50,6 +51,7 @@ public class Login : MonoBehaviour {
         }
     }
 
+    //Get user information from the login menu
     public void getUserInfo()
     {
         string username = Username.text;
@@ -64,11 +66,13 @@ public class Login : MonoBehaviour {
         }
     }
 
+    //Take user to the create account menu
     public void CreateAccount()
     {
         SceneManager.LoadScene("Create Account");
     }
 
+    //Show popup to the user
     public void showPopUp(int popupNumber)
     {
         if (popupNumber == 1)
@@ -80,12 +84,14 @@ public class Login : MonoBehaviour {
         }
     }
 
+    //Hide popup from the user
     public void hidePopUp()
     {
         popup.SetActive(false);
         popup2.SetActive(false);
     }
 
+    //Take user to the main menu
     public void SkipLogin()
     {
         if (!popup2.activeInHierarchy) {

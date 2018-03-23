@@ -100,6 +100,7 @@ public class BarnBuilding : MonoBehaviour {
         }
 	}
 
+    //If up is clicked move pieces up
     public void UpArrow()
     {
         piece1.MovePiece(true);
@@ -120,6 +121,7 @@ public class BarnBuilding : MonoBehaviour {
         piece16.MovePiece(true);
     }
 
+    //If down is clicked move pieces down
     public void DownArrow()
     {
         piece1.MovePiece(false);
@@ -175,6 +177,7 @@ public class BarnBuilding : MonoBehaviour {
         ChangeScene();
     }
 
+    //show hint to the user if allowed
     public void showHint()
     {
         if (hintAllowed)
@@ -183,22 +186,26 @@ public class BarnBuilding : MonoBehaviour {
         }
     }
 
+    //Hide panels from the user
     public void hideHint()
     {
         Hint.SetActive(false);
         exitPanel.SetActive(false);
     }
 
+    //Change scene to next scene in build
     public void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    //Show exit panel to the user
     public void exitGame()
     {
         exitPanel.SetActive(true);
     }
 
+    //Take the user back to the main menu
     public void MainMenu()
     {
         SceneManager.LoadScene("Main Menu");

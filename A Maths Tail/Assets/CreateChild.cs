@@ -58,15 +58,18 @@ public class CreateChild : MonoBehaviour {
         }
     }
 
+    //Take the user to the select child menu
     public void SelectChild()
     {
         SceneManager.LoadScene("Select Child");
     }
 
+    //Show popup to the user
     public void showPopUp() {
         popup.SetActive(true);
     }
 
+    //Hide popup from the user
     public void hidePopUp()
     {
         popup.SetActive(false);

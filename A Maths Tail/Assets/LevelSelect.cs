@@ -10,17 +10,20 @@ public class LevelSelect : MonoBehaviour {
     public Button level3;
     public Button level4;
     public Button level5;
+    public Button level6;
     string getLevelURL = "https://amathstail.000webhostapp.com/GetLevel.php";
     int level = 0;
 
     // Use this for initialization
     void Start () {
+        //Only show replayable levels if the user has saves enabled
         if (PlayerPrefs.GetInt("saves") != 0)
         {
             StartCoroutine(GetLevel());
         }
     }
 	
+    //Get last completed level from the database and update level icons accordingly
 	public IEnumerator GetLevel()
     {
         WWWForm form = new WWWForm();
@@ -49,8 +52,13 @@ public class LevelSelect : MonoBehaviour {
         {
             level5.interactable = true;
         }
+        if (level >= 5)
+        {
+            level6.interactable = true;
+        }
     }
 
+    //Get the level clicked and take user to the level
     public void LoadLevel()
     {
         GameObject thisButton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
@@ -75,8 +83,13 @@ public class LevelSelect : MonoBehaviour {
         {
             SceneManager.LoadScene("MacDonald's Farm");
         }
+        if (levelName == "Level 6")
+        {
+            SceneManager.LoadScene("Reading Puzzle 5");
+        }
     }
 
+    //Take user back to main menu
     public void MainMenu()
     {
         SceneManager.LoadScene("Main Menu");

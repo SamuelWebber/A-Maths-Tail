@@ -71,6 +71,7 @@ public class WallBuilding : MonoBehaviour {
         }
     }
 
+    //Check whether values in the input fields are correct, update score/wrong guesses accordinglyu
     public void CheckCorrect()
     {
         if (value1.text == "4410" && value2.text == "3090" && value3.text == "2956" && value4.text == "1454" && value5.text == "1232")
@@ -91,6 +92,7 @@ public class WallBuilding : MonoBehaviour {
         }
     }
 
+    //Upload score to the server
     public IEnumerator UploadScore(int score)
     {
         WWWForm form = new WWWForm();
@@ -124,6 +126,7 @@ public class WallBuilding : MonoBehaviour {
         ChangeScene();
     }
 
+    //Show hint to the user
     public void showHint()
     {
         if (hintAllowed)
@@ -132,22 +135,26 @@ public class WallBuilding : MonoBehaviour {
         }
     }
 
+    //Hide all panels from the user
     public void hideHint()
     {
         Hint.SetActive(false);
         exitPanel.SetActive(false);
     }
 
+    //Change to the next scene in the build
     public void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    //Show exit panel to the user
     public void exitGame()
     {
         exitPanel.SetActive(true);
     }
 
+    //Take user to the main menu
     public void MainMenu()
     {
         SceneManager.LoadScene("Main Menu");

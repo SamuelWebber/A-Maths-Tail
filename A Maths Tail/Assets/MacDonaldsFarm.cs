@@ -98,6 +98,7 @@ public class MacDonaldsFarm : MonoBehaviour {
         lasttext = tones.text;
     }
 
+    //Get selected answer, check if correct for current round, if so update the score accordingly. On last round send score to the server
     public void SelectedAnswer()
     {
         string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
@@ -171,6 +172,7 @@ public class MacDonaldsFarm : MonoBehaviour {
         }
     }
 
+    //Upload score to the server to save the score
     public IEnumerator UploadScore(int score, int puzzleID)
     {
         Debug.Log("hello");
@@ -205,11 +207,13 @@ public class MacDonaldsFarm : MonoBehaviour {
         ChangeScene();
     }
 
+    //Change scene to next scene in build
     public void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    //Show hint to the user if allowed
     public void showHint()
     {
         if (hintAllowed)
@@ -218,18 +222,21 @@ public class MacDonaldsFarm : MonoBehaviour {
         }
     }
 
+    //Hide all panels from the user
     public void hideHint()
     {
         Hint.SetActive(false);
         exitPanel.SetActive(false);
     }
 
+    //Show exit panel to the user
     public void exitGame()
     {
         exitPanel.SetActive(true);
 
     }
 
+    //Go to the main menu
     public void MainMenu()
     {
         toneAnalyzer.StopRecording();

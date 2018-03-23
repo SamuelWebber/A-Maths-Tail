@@ -75,6 +75,7 @@ public class RecipeBook : MonoBehaviour {
         }
     }
 
+    //Check whether values in input fields are correct, upload score if puzzle is completed, otherwise update number of wrong guesses
     public void CheckCorrect()
     {
         if (((value1.text == "1" && value2.text == "2") || (value1.text == "2" && value2.text == "1")) && value3.text == "20" && value4.text == "3" && 
@@ -96,6 +97,7 @@ public class RecipeBook : MonoBehaviour {
         }
     }
 
+    //Upload score to the server
     public IEnumerator UploadScore(int score)
     {
         WWWForm form = new WWWForm();
@@ -129,6 +131,7 @@ public class RecipeBook : MonoBehaviour {
         ChangeScene();
     }
 
+    //Show hint panel to the user
     public void showHint()
     {
         if (hintAllowed)
@@ -137,24 +140,28 @@ public class RecipeBook : MonoBehaviour {
         }
     }
 
+    //Hide all panels from the user
     public void hideHint()
     {
         Hint.SetActive(false);
         exitPanel.SetActive(false);
     }
 
+    //Show exit panel to the user
     public void exitGame()
     {
         exitPanel.SetActive(true);
 
     }
 
+    //Take user to the main menu
     public void MainMenu()
     {
         toneAnalyzer.StopRecording();
         SceneManager.LoadScene("Main Menu");
     }
 
+    //Change to next scene in the current build
     public void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

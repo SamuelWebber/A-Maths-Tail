@@ -21,10 +21,12 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene("Login Menu");
     }
 
+    //Start a new game
     public void NewGame() {
         SceneManager.LoadScene("Reading Puzzle 1");
     }
 
+    //Load current progress depending on whether has saves enabled
     public void LoadGame()
     {
         if (PlayerPrefs.GetInt("saves") != 0)
@@ -33,6 +35,7 @@ public class MainMenu : MonoBehaviour {
         }
     }
 
+    //Get the last level completed from the server
     public IEnumerator GetLevel()
     {
         WWWForm form = new WWWForm();
@@ -62,6 +65,9 @@ public class MainMenu : MonoBehaviour {
                     break;
                 case 5:
                     SceneManager.LoadScene("Reading Puzzle 5");
+                    break;
+                case 6:
+                    SceneManager.LoadScene("Reading Puzzle 6");
                     break;
             }
         }
