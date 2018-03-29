@@ -11,6 +11,7 @@ public class LevelSelect : MonoBehaviour {
     public Button level4;
     public Button level5;
     public Button level6;
+    public Button level7;
     string getLevelURL = "https://amathstail.000webhostapp.com/GetLevel.php";
     int level = 0;
 
@@ -56,6 +57,10 @@ public class LevelSelect : MonoBehaviour {
         {
             level6.interactable = true;
         }
+        if (level >= 6)
+        {
+            level7.interactable = true;
+        }
     }
 
     //Get the level clicked and take user to the level
@@ -86,6 +91,10 @@ public class LevelSelect : MonoBehaviour {
         if (levelName == "Level 6")
         {
             SceneManager.LoadScene("Reading Puzzle 5");
+        }
+        if (levelName == "Level 7")
+        {
+            SceneManager.LoadScene("Reading Puzzle 6");
         }
     }
 

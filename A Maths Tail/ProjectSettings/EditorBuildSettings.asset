@@ -65,3 +65,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Three Bears.unity
     guid: 6597738b08e40284cac0e03756c090fe
+  - enabled: 1
+    path: Assets/Reading Puzzle 7.unity
+    guid: ad285b4c04a01ed41a54b069b993bacf
+  - enabled: 1
+    path: Assets/Rabbit Memory Game.unity
+    guid: aabf600ebf5d06546b9859d183dcfc79

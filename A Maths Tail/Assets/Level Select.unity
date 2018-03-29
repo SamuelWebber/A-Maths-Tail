@@ -1135,6 +1135,7 @@ MonoBehaviour:
   level4: {fileID: 1490431591}
   level5: {fileID: 246746409}
   level6: {fileID: 539479743}
+  level7: {fileID: 1707060167}
 --- !u!1 &1056546421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,7 +1844,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8a5db84bf91a8a048b0e1fa6edacc65c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

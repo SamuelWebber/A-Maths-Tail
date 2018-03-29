@@ -69,6 +69,9 @@ public class MainMenu : MonoBehaviour {
                 case 6:
                     SceneManager.LoadScene("Reading Puzzle 6");
                     break;
+                case 7:
+                    SceneManager.LoadScene("Reading Puzzle 7");
+                    break;
             }
         }
         Debug.Log(website.text);

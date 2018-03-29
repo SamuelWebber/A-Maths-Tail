@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - pair1
+  - pair2
+  - pair3
+  - pair4
+  - pair5
+  - pair6
+  - pair7
+  - pair8
   layers:
   - Default
   - TransparentFX
