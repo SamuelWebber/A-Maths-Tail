@@ -66,6 +66,7 @@ public class SelectChild : MonoBehaviour {
             string name = child.options[child.value].text;
             int id = ids.ElementAt(child.value);
             PlayerPrefs.SetInt("ChildID", id);
+            PlayerPrefs.SetString("ChildName", name);
             SceneManager.LoadScene("Child Score Menu");
         } catch (ArgumentOutOfRangeException) {
             message.text = "Your account does not link to any child accounts! Please create one first!";

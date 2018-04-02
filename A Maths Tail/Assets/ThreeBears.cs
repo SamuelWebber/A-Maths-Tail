@@ -358,6 +358,7 @@ public class ThreeBears : MonoBehaviour {
     //Change scene to next scene in build
     public void ChangeScene()
     {
+        toneAnalyzer.StopRecording();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

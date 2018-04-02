@@ -71,3 +71,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Rabbit Memory Game.unity
     guid: aabf600ebf5d06546b9859d183dcfc79
+  - enabled: 1
+    path: Assets/Reading Puzzle 8.unity
+    guid: 7c2acdd352151cd41b5bc8302d55dcf5
+  - enabled: 1
+    path: Assets/Dragons Lair.unity
+    guid: 63e33a2487aaa494a8769a40fcb4a09c
+  - enabled: 1
+    path: Assets/Reading Puzzle 9.unity
+    guid: 828d337a557abbd48917265bc8e5b9a2
+  - enabled: 1
+    path: Assets/Toy Shop.unity
+    guid: 7cc2aec7e4359de429796bb52660d271
+  - enabled: 1
+    path: Assets/Reading Puzzle 10.unity
+    guid: bee5cbfc6c951ad478c223232f9fdb85
+  - enabled: 1
+    path: Assets/Kings Castle.unity
+    guid: bb5ad970ee3a9aa4a8eef9eff93312c2
+  - enabled: 1
+    path: Assets/Final Reading Puzzle.unity
+    guid: 74e97af7fb678a64f8271a2d5305fd32
