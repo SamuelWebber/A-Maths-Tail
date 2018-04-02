@@ -16,6 +16,19 @@ Assets/Multiplication Window.unity
 Assets/Reading Puzzle 4.unity
 Assets/Barn Building.unity
 Assets/MacDonald's Farm.unity
+Assets/Reading Puzzle 5.unity
+Assets/Recipe Book.unity
+Assets/Reading Puzzle 6.unity
+Assets/Three Bears.unity
+Assets/Reading Puzzle 7.unity
+Assets/Rabbit Memory Game.unity
+Assets/Reading Puzzle 8.unity
+Assets/Dragons Lair.unity
+Assets/Reading Puzzle 9.unity
+Assets/Toy Shop.unity
+Assets/Reading Puzzle 10.unity
+Assets/Kings Castle.unity
+Assets/Final Reading Puzzle.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -132,6 +145,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleNaturalLanguageUnderstanding
+9a20e716da4c65779832828bc03807cf Assembly-CSharp.dll:.RecipeBook
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -139,11 +153,14 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+456a74dce54bfcb200705f4ba8b51d5e Assembly-CSharp.dll:.DragonsLair
+ee0e9ee8199450d3444a11ec9339f8a3 Assembly-CSharp.dll:.KingsCastle
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleTradeoffAnalytics
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleGetToken
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleTextToSpeech
 3a585a33df1a7115605ac720196cf48d Assembly-CSharp.dll:.EscapeTheTower
 b1e7ba3e8f0547db898f8e7a8217d391 Assembly-CSharp.dll:IBM.Watson.DeveloperCloud.Editor.UnitTestManager
+be59c79a36caaf9f29fcf6049d2df041 Assembly-CSharp.dll:.ToyShop
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleAlchemyLanguage
@@ -174,6 +191,8 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleLanguageTranslator
 0ed942a4ef26771d08a77579e57fc253 Assembly-CSharp.dll:.ReadingPuzzleSpeechToText
+6c559d81c46373305a77cac60257e8d1 Assembly-CSharp.dll:.ThreeBears
+b9d97a752bf3dde545129584fb7ff479 Assembly-CSharp.dll:.ChildScoreMenu
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
@@ -181,17 +200,20 @@ e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleRetrieveAndRank
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 6a46843a7f774fdca137b2aa88b7720f Assembly-CSharp.dll:.SelectChild
+5cd22a1a8d38dee1a8c3bd0f503ebe71 Assembly-CSharp.dll:.MemoryGame
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+4970db4899b255cf9cd1b89d4604684f Assembly-CSharp.dll:.Bar
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-663b3650b490f325a753198b0b228c65 Assembly-CSharp.dll:.LevelSelect
+63f65e045811738d053d30ed14728f2e Assembly-CSharp.dll:.LevelSelect
 8b2457f280ce2f495d70503228bc3a6d Assembly-CSharp.dll:IBM.Watson.DeveloperCloud.Utilities.FrameRateCounter
+ee7a9986993eba44c20748517be63e99 Assembly-CSharp.dll:.MacDonaldsFarm
 aae75bd13d13f0945032b257935021f3 Assembly-CSharp.dll:.CreateChild
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:IBM.Watson.DeveloperCloud.Utilities.KeyEventManager
 99cc392a067c31482c764b7ca2aa93ed Assembly-CSharp.dll:.Login
+c4a9d82d54a238915fed463486297f31 Assembly-CSharp.dll:.BarChart
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleDiscovery
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleNaturalLanguageClassifier
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MacDonaldsFarm

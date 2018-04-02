@@ -57,6 +57,7 @@ public class ChildScoreMenu : MonoBehaviour {
         panel3.SetActive(false);
     }
 
+    //Generate bar chart for all categories
     public void GenerateAllCategories()
     {
         List<float> categories = new List<float>();
@@ -78,6 +79,7 @@ public class ChildScoreMenu : MonoBehaviour {
         barChart.DisplayGraph(categories, labels);
     }
 
+    //Generate bar chart for number puzzles
     public void GenerateNumber()
     {
         List<float> number = new List<float>();
@@ -93,6 +95,7 @@ public class ChildScoreMenu : MonoBehaviour {
         barChart2.DisplayGraph(number, labels);
     }
 
+    //Generate barchart for measurement
     public void GenerateMeasurement()
     {
         List<float> measurement = new List<float>();
@@ -106,6 +109,7 @@ public class ChildScoreMenu : MonoBehaviour {
         barChart3.DisplayGraph(measurement, labels);
     }
 
+    //Show all categories scores
     public void ShowAllCategories()
     {
         panel.SetActive(true);
@@ -113,6 +117,7 @@ public class ChildScoreMenu : MonoBehaviour {
         panel3.SetActive(false);
     }
 
+    //Show number scores
     public void ShowNumber()
     {
         panel.SetActive(false);
@@ -120,6 +125,7 @@ public class ChildScoreMenu : MonoBehaviour {
         panel3.SetActive(false);
     }
 
+    //Show measurement scores
     public void ShowMeasurement()
     {
         panel.SetActive(false);
@@ -127,6 +133,7 @@ public class ChildScoreMenu : MonoBehaviour {
         panel3.SetActive(true);
     }
 
+    //Go back to select child menu
     public void SelectChild()
     {
         SceneManager.LoadScene("Select Child");

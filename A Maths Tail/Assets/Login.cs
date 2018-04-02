@@ -102,4 +102,10 @@ public class Login : MonoBehaviour {
             SceneManager.LoadScene("Main Menu");
         }
     }
+
+    //Let the user exit the game
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
