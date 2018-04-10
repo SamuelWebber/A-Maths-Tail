@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 685
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 764
+  controlID: 914
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 880
+  controlID: 915
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 881
+  controlID: 916
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,25 +317,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 1366
-      height: 597
-    m_Scale: {x: 0.77734375, y: 0.77734375}
-    m_Translation: {x: 683, y: 298.5}
+      width: 671
+      height: 321
+    m_Scale: {x: 0.41796875, y: 0.41796875}
+    m_Translation: {x: 335.5, y: 160.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -878.6332
+      x: -802.6916
       y: -384
-      width: 1757.2664
+      width: 1605.3832
       height: 768
     m_MinimalGUI: 1
-  m_defaultScale: 0.77734375
+  m_defaultScale: 0.41796875
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1366, y: 614}
+  m_LastWindowPixelSize: {x: 671, y: 338}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -368,9 +368,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c8070000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 9efbffff00000000
+    m_ExpandedIDs: 5ec6ffff46c7ffff80c8ffff8ac8ffff92c8ffff9cc8ffffa4c8ffffaec8ffffb6c8ffffc0c8ffffc8c8ffffd2c8ffffdac8ffffe4c8ffffecc8fffff6c8ffff02c9ffff0ac9ffff14c9ffff1cc9ffff24c9ffff2ec9ffff36c9ffff42c9ffff4cc9ffff56c9ffff64c9ffff6ec9ffff78c9ffff8cc9ffff96c9ffff82ddfffff8f4ffff04f6ffff3af7ffff40f7ffff44f7ffff4af7ffff4ef7ffff54f7ffff58f7ffff5ef7ffff62f7ffff68f7ffff6cf7ffff72f7ffff76f7ffff7cf7ffff84f7ffff88f7ffff8ef7ffff94f7ffff98f7ffff9cf7ffffa0f7ffffa8f7ffffaef7ffffb4f7ffffbef7ffffc4f7ffffcaf7ffffdaf7ffffe2f7ffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -389,7 +389,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - Escape The Tower Puzzle
+  - Wall Building
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -629,7 +629,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 204.5}
+    m_ScrollPosition: {x: 0, y: 1025}
     m_GridSize: 65
   m_DirectoriesAreaWidth: 175
 --- !u!114 &17
