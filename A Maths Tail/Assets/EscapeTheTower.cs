@@ -113,6 +113,69 @@ public class EscapeTheTower : MonoBehaviour {
                 ChangeScene();
             }
         } else {
+            if (Piece1.text != "10,000,000")
+            {
+                Piece1.color = new Color(255, 0, 0);
+            } else
+            {
+                Piece1.color = new Color(0, 255, 0);
+            }
+            if (Piece2.text != "57,237")
+            {
+                Piece2.color = new Color(255, 0, 0);
+            }
+            else
+            {
+                Piece2.color = new Color(0, 255, 0);
+            }
+            if (Piece3.text != "4,999")
+            {
+                Piece3.color = new Color(255, 0, 0);
+            }
+            else
+            {
+                Piece3.color = new Color(0, 255, 0);
+            }
+            if (Piece4.text != "CMXCIX")
+            {
+                Piece4.color = new Color(255, 0, 0);
+            }
+            else
+            {
+                Piece4.color = new Color(0, 255, 0);
+            }
+            if (!Piece5.text.Contains("Round 493"))
+            {
+                Piece5.color = new Color(255, 0, 0);
+            }
+            else
+            {
+                Piece5.color = new Color(0, 255, 0);
+            }
+            if (Piece6.text != "13")
+            {
+                Piece6.color = new Color(255, 0, 0);
+            }
+            else
+            {
+                Piece6.color = new Color(0, 255, 0);
+            }
+            if (Piece7.text != "XII")
+            {
+                Piece7.color = new Color(255, 0, 0);
+            }
+            else
+            {
+                Piece7.color = new Color(0, 255, 0);
+            }
+            if (Piece8.text != "1")
+            {
+                Piece8.color = new Color(255, 0, 0);
+            }
+            else
+            {
+                Piece8.color = new Color(0, 255, 0);
+            }
             wrongGuesses++;
             Debug.Log(wrongGuesses);
         }
