@@ -74,6 +74,45 @@ public class MultiplicationWindow : MonoBehaviour {
     //Check whether all input fields have the correct values in them
     public void CheckCorrect()
     {
+        if (value1.text != "39")
+        {
+            value1.color = new Color(255, 0, 0);
+        } else
+        {
+            value1.color = new Color(0, 255, 0);
+        }
+        if (value2.text != "2")
+        {
+            value2.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value2.color = new Color(0, 255, 0);
+        }
+        if (value3.text != "37")
+        {
+            value3.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value3.color = new Color(0, 255, 0);
+        }
+        if (value4.text != "481")
+        {
+            value4.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value4.color = new Color(0, 255, 0);
+        }
+        if (value5.text != "962")
+        {
+            value5.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value5.color = new Color(0, 255, 0);
+        }
         if (value1.text == "39" && value2.text == "2" && value3.text == "37" && value4.text == "481" && value5.text == "962")
         {
             int saves = PlayerPrefs.GetInt("saves");

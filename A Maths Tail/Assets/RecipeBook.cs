@@ -78,6 +78,61 @@ public class RecipeBook : MonoBehaviour {
     //Check whether values in input fields are correct, upload score if puzzle is completed, otherwise update number of wrong guesses
     public void CheckCorrect()
     {
+        if ((value1.text == "1" && value2.text == "2") || (value1.text == "2" && value2.text == "1")) {
+            value1.color = new Color(0, 255, 0);
+            value2.color = new Color(0, 255, 0);
+        } else
+        {
+            value1.color = new Color(255, 0, 0);
+            value2.color = new Color(255, 0, 0);
+        }
+        if (value3.text != "20")
+        {
+            value3.color = new Color(255, 0, 0);
+        } else
+        {
+            value3.color = new Color(0, 255, 0);
+        }
+        if (value4.text != "3")
+        {
+            value4.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value4.color = new Color(0, 255, 0);
+        }
+        if (value5.text != "3")
+        {
+            value5.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value5.color = new Color(0, 255, 0);
+        }
+        if (value6.text != "1")
+        {
+            value6.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value6.color = new Color(0, 255, 0);
+        }
+        if (value7.text != "1")
+        {
+            value7.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value7.color = new Color(0, 255, 0);
+        }
+        if (value8.text != "32")
+        {
+            value8.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value8.color = new Color(0, 255, 0);
+        }
         if (((value1.text == "1" && value2.text == "2") || (value1.text == "2" && value2.text == "1")) && value3.text == "20" && value4.text == "3" && 
             value5.text == "3" && value6.text == "1" && value7.text == "1" && value8.text == "32")
         {

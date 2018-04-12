@@ -204,7 +204,10 @@ public class MacDonaldsFarm : MonoBehaviour {
             yield return website3;
             Debug.Log("updated" + website3.text);
         }
-        ChangeScene();
+        if (puzzleID == 5)
+        {
+            ChangeScene();
+        }
     }
 
     //Change scene to next scene in build

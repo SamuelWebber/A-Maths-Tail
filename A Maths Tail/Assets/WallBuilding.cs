@@ -74,6 +74,46 @@ public class WallBuilding : MonoBehaviour {
     //Check whether values in the input fields are correct, update score/wrong guesses accordinglyu
     public void CheckCorrect()
     {
+        if (value1.text != "4410")
+        {
+            value1.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value1.color = new Color(0, 255, 0);
+        }
+        if (value2.text != "3090")
+        {
+            value2.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value2.color = new Color(0, 255, 0);
+        }
+        if (value3.text != "2956")
+        {
+            value3.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value3.color = new Color(0, 255, 0);
+        }
+        if (value4.text != "1454")
+        {
+            value4.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value4.color = new Color(0, 255, 0);
+        }
+        if (value5.text != "1232")
+        {
+            value5.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            value5.color = new Color(0, 255, 0);
+        }
         if (value1.text == "4410" && value2.text == "3090" && value3.text == "2956" && value4.text == "1454" && value5.text == "1232")
         {
             int saves = PlayerPrefs.GetInt("saves");
@@ -87,45 +127,6 @@ public class WallBuilding : MonoBehaviour {
             }
         } else
         {
-            if (value1.text != "4410")
-            {
-                value1.color = new Color(255, 0, 0);
-            } else
-            {
-                value1.color = new Color(0, 255, 0);
-            }
-            if (value2.text != "3090")
-            {
-                value2.color = new Color(255, 0, 0);
-            }
-            else
-            {
-                value2.color = new Color(0, 255, 0);
-            }
-            if (value3.text != "2956")
-            {
-                value3.color = new Color(255, 0, 0);
-            }
-            else
-            {
-                value3.color = new Color(0, 255, 0);
-            }
-            if (value4.text != "1454")
-            {
-                value4.color = new Color(255, 0, 0);
-            }
-            else
-            {
-                value4.color = new Color(0, 255, 0);
-            }
-            if (value5.text != "1232")
-            {
-                value5.color = new Color(255, 0, 0);
-            }
-            else
-            {
-                value5.color = new Color(0, 255, 0);
-            }
             wrongGuesses++;
             Debug.Log(wrongGuesses);
         }
