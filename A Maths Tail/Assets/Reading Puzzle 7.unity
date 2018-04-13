@@ -1374,7 +1374,7 @@ RectTransform:
   - {fileID: 17282692}
   - {fileID: 1606389406}
   m_Father: {fileID: 1744477094}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.25}
   m_AnchorMax: {x: 0.75, y: 0.75}
@@ -2092,7 +2092,7 @@ RectTransform:
   m_LocalScale: {x: 1.28, y: 1.28, z: 1.28}
   m_Children: []
   m_Father: {fileID: 1744477094}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2275,10 +2275,10 @@ RectTransform:
   - {fileID: 454380499}
   - {fileID: 1019445362}
   - {fileID: 952249830}
-  - {fileID: 2092363062}
   - {fileID: 1969598151}
-  - {fileID: 1205938718}
   - {fileID: 1740909699}
+  - {fileID: 2092363062}
+  - {fileID: 1205938718}
   - {fileID: 122365357}
   - {fileID: 1250562661}
   m_Father: {fileID: 0}
@@ -2365,7 +2365,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 182632387}
         m_MethodName: hidePanel
         m_Mode: 1
         m_Arguments:
@@ -2562,7 +2562,7 @@ RectTransform:
   m_LocalScale: {x: 1.28, y: 1.28, z: 1.28}
   m_Children: []
   m_Father: {fileID: 1744477094}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2820,7 +2820,7 @@ RectTransform:
   - {fileID: 620586227}
   - {fileID: 1778522734}
   m_Father: {fileID: 1744477094}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.25}
   m_AnchorMax: {x: 0.75, y: 0.75}

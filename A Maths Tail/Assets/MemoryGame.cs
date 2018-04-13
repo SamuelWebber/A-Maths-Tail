@@ -199,7 +199,6 @@ public class MemoryGame : MonoBehaviour {
                     {
                         int score = (int)(100 -(wrongGuesses / (wrongGuesses + 8)) * 100);
                         StartCoroutine(UploadScore(score));
-                        ChangeScene();
                     }
                     else
                     {

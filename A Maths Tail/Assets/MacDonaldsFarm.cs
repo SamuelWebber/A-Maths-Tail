@@ -175,7 +175,6 @@ public class MacDonaldsFarm : MonoBehaviour {
     //Upload score to the server to save the score
     public IEnumerator UploadScore(int score, int puzzleID)
     {
-        Debug.Log("hello");
         WWWForm form = new WWWForm();
         form.AddField("childIDPost", PlayerPrefs.GetInt("userID"));
         form.AddField("puzzleIDPost", puzzleID);

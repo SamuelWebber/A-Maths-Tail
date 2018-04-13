@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Reading Puzzle 5.unity
+- path: Assets/Final Reading Puzzle.unity
   isLoaded: 1
   isActive: 1
