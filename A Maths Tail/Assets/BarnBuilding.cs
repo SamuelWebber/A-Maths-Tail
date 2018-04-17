@@ -30,17 +30,22 @@ public class BarnBuilding : MonoBehaviour {
     public GameObject Hint;
     public GameObject exitPanel;
     public PuzzleToneAnalyzer toneAnalyzer;
-    public bool scoreSaved = false;
+    public Button upButton;
+    public Button downButton;
+    bool scoreSaved = false;
     bool hintAllowed = false;
     string lasttext = "";
     int puzzleID = 4;
+    int index = 0;
     string insertScoreURL = "https://amathstail.000webhostapp.com/InsertScore.php";
     string getScoreURL = "https://amathstail.000webhostapp.com/GetScore.php";
     string updateScoreURL = "https://amathstail.000webhostapp.com/UpdateScore.php";
 
     // Use this for initialization
     void Start () {
-		
+        piecesRemaining = 16;
+        scoreSaved = false;
+        index = 0;
 	}
 	
 	// Update is called once per frame
@@ -103,6 +108,12 @@ public class BarnBuilding : MonoBehaviour {
     //If up is clicked move pieces up
     public void UpArrow()
     {
+        index++;
+        downButton.interactable = true;
+        if (index == 6)
+        {
+            upButton.interactable = false;
+        }
         piece1.MovePiece(true);
         piece2.MovePiece(true);
         piece3.MovePiece(true);
@@ -124,6 +135,12 @@ public class BarnBuilding : MonoBehaviour {
     //If down is clicked move pieces down
     public void DownArrow()
     {
+        index--;
+        if (index == -6)
+        {
+            downButton.interactable = false;
+        }
+        upButton.interactable = true;
         piece1.MovePiece(false);
         piece2.MovePiece(false);
         piece3.MovePiece(false);
