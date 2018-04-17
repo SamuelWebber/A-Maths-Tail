@@ -169,7 +169,7 @@ fc662c85e0721e10aff011bb04caf5d4 Assembly-CSharp.dll:.ExampleStreamingSplitSampl
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleToneAnalyzer
 1bbdab6d9a50cc284ae76711398acdfa Assembly-CSharp.dll:.CreateAccount
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleVisualRecognition
-8d0ee2f3b8d8463ac4edfdbfa9972c92 Assembly-CSharp.dll:.BarnBuilding
+be923042d63ee89e5d93632eb0cd69b9 Assembly-CSharp.dll:.BarnBuilding
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:IBM.Watson.DeveloperCloud.Utilities.Runnable
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExamplePersonalityInsights
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:IBM.Watson.DeveloperCloud.Examples.ExampleCallback
