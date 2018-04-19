@@ -416,7 +416,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3f27f4273d122a24991643a874e45fc0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 18b142d7f9f81d24d965b3f10bf4801d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1373,7 +1373,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d0fbbbbe26e60f34f8ef820ade5099c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 570a1fbf9612fd1469204a542817348b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1568,7 +1568,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1b81195ceab46344393fe5f016e9f77a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1348a3278aa38664cbbd5c9a3127ae5d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2794,14 +2794,14 @@ MonoBehaviour:
   hint: {fileID: 549055426}
   Hint: {fileID: 240877589}
   exitPanel: {fileID: 658357959}
-  scarf1: {fileID: 21300000, guid: 1b81195ceab46344393fe5f016e9f77a, type: 3}
+  scarf1: {fileID: 21300000, guid: 1348a3278aa38664cbbd5c9a3127ae5d, type: 3}
   scarf2: {fileID: 21300000, guid: 90d79b5a9d72039459de409defa351e1, type: 3}
   scarf3: {fileID: 21300000, guid: b1510cbe5562b9c439abfade4d424bab, type: 3}
   suitcase1: {fileID: 21300000, guid: dfb29937e64842d45ae11b848851fa5f, type: 3}
   suitcase2: {fileID: 21300000, guid: f651bb65a6f54c64481dd98db8057a25, type: 3}
-  suitcase3: {fileID: 21300000, guid: 135f4bb08a75a4d4bae0103b18f1bbeb, type: 3}
-  mug1: {fileID: 21300000, guid: 3f27f4273d122a24991643a874e45fc0, type: 3}
-  mug2: {fileID: 21300000, guid: d0fbbbbe26e60f34f8ef820ade5099c5, type: 3}
+  suitcase3: {fileID: 21300000, guid: c78b904d55375264bbf1e80bd8a1a4f2, type: 3}
+  mug1: {fileID: 21300000, guid: 18b142d7f9f81d24d965b3f10bf4801d, type: 3}
+  mug2: {fileID: 21300000, guid: 570a1fbf9612fd1469204a542817348b, type: 3}
   mug3: {fileID: 21300000, guid: 449c5eae5be90e54f9aa1a46ce97816a, type: 3}
   bottle1: {fileID: 21300000, guid: 0a3944d72964fce468f39b16cef5932d, type: 3}
   bottle2: {fileID: 21300000, guid: d811b41b14edf9f4ca667ff091200496, type: 3}
@@ -2821,17 +2821,17 @@ MonoBehaviour:
   image1: {fileID: 0}
   image2: {fileID: 0}
   item1: {fileID: 21300000, guid: 0a3944d72964fce468f39b16cef5932d, type: 3}
-  item2: {fileID: 21300000, guid: d0fbbbbe26e60f34f8ef820ade5099c5, type: 3}
+  item2: {fileID: 21300000, guid: 570a1fbf9612fd1469204a542817348b, type: 3}
   item3: {fileID: 21300000, guid: b1510cbe5562b9c439abfade4d424bab, type: 3}
   item4: {fileID: 21300000, guid: d811b41b14edf9f4ca667ff091200496, type: 3}
   item5: {fileID: 21300000, guid: 449c5eae5be90e54f9aa1a46ce97816a, type: 3}
   item6: {fileID: 21300000, guid: dfb29937e64842d45ae11b848851fa5f, type: 3}
   item7: {fileID: 21300000, guid: 00a4a1499dfef404498917c11e95bf89, type: 3}
-  item8: {fileID: 21300000, guid: 1b81195ceab46344393fe5f016e9f77a, type: 3}
+  item8: {fileID: 21300000, guid: 1348a3278aa38664cbbd5c9a3127ae5d, type: 3}
   item9: {fileID: 21300000, guid: f651bb65a6f54c64481dd98db8057a25, type: 3}
-  item10: {fileID: 21300000, guid: 3f27f4273d122a24991643a874e45fc0, type: 3}
+  item10: {fileID: 21300000, guid: 18b142d7f9f81d24d965b3f10bf4801d, type: 3}
   item11: {fileID: 21300000, guid: 90d79b5a9d72039459de409defa351e1, type: 3}
-  item12: {fileID: 21300000, guid: 135f4bb08a75a4d4bae0103b18f1bbeb, type: 3}
+  item12: {fileID: 21300000, guid: c78b904d55375264bbf1e80bd8a1a4f2, type: 3}
 --- !u!1 &1667923808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,7 +2939,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 135f4bb08a75a4d4bae0103b18f1bbeb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c78b904d55375264bbf1e80bd8a1a4f2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

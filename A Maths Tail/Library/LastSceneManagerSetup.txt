@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Barn Building.unity
+- path: Assets/Three Bears.unity
   isLoaded: 1
   isActive: 1
