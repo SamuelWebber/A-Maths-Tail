@@ -15,7 +15,6 @@ public class ChildScoreMenu : MonoBehaviour {
     public GameObject panel;
     public GameObject panel2;
     public GameObject panel3;
-    List<Bar> bars = new List<Bar>();
 
     // Use this for initialization, get child's name and id, then get all scores for the child
     void Start () {

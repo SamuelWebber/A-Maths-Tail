@@ -30,8 +30,8 @@ public class ReadingPuzzleSpeechToText : MonoBehaviour {
     string word;
     string finalText = "";
     public bool active = false;
-    private string _username = "3e053a59-132f-4aa0-ba3f-b791886769eb";
-    private string _password = "rgn33MJhVBAZ";
+    private string _username = "c492a65d-9e5f-4c63-89f1-6fd068d2e2e7";
+    private string _password = "QahCIUVcXN3P";
     private string _url = "https://stream-tls10.watsonplatform.net/speech-to-text/api";
 
     private int _recordingRoutine = 0;

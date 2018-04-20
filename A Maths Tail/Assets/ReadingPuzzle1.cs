@@ -24,7 +24,6 @@ public class ReadingPuzzle1 : MonoBehaviour {
     public GameObject panel2;
     public Text message;
     bool isActive = false;
-    bool hintAllowed = false;
     Camera maincamera;
 
 	// Use this for initialization

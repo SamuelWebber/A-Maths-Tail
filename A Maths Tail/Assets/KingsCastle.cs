@@ -30,7 +30,6 @@ public class KingsCastle : MonoBehaviour {
     public Button hint;
     public GameObject Hint;
     public GameObject exitPanel;
-    double wrongGuesses = 0;
     bool hintAllowed = false;
     string lasttext = "";
     int puzzleID = 11;

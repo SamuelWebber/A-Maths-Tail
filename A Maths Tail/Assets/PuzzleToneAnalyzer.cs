@@ -37,11 +37,10 @@ public class PuzzleToneAnalyzer : MonoBehaviour {
     private string _toneurl = "https://gateway.watsonplatform.net/tone-analyzer/api";
     private ToneAnalyzer _toneAnalyzer;
     private string _toneAnalyzerVersionDate = "2017-05-26";
-    private bool _analyzeToneTested = false;
 
     //These are the variables needed for the Speech To Text
-    private string _username = "3e053a59-132f-4aa0-ba3f-b791886769eb";
-    private string _password = "rgn33MJhVBAZ";
+    private string _username = "c492a65d-9e5f-4c63-89f1-6fd068d2e2e7";
+    private string _password = "QahCIUVcXN3P";
     private string _url = "https://stream-tls10.watsonplatform.net/speech-to-text/api";
     private int _recordingRoutine = 0;
     private string _microphoneID = null;
@@ -50,8 +49,6 @@ public class PuzzleToneAnalyzer : MonoBehaviour {
     private int _recordingHZ = 22050;
 
     private SpeechToText _speechToText;
-
-    private string _stringToTestTone = "I'm so happy";
 
     void Start()
     {
@@ -65,7 +62,6 @@ public class PuzzleToneAnalyzer : MonoBehaviour {
         Credentials credentials2 = new Credentials(_toneusername, _tonepassword, _toneurl);
         _toneAnalyzer = new ToneAnalyzer(credentials2);
         _toneAnalyzer.VersionDate = _toneAnalyzerVersionDate;
-        //Runnable.Run(Examples());
     }
 
     public bool Active
@@ -179,18 +175,6 @@ public class PuzzleToneAnalyzer : MonoBehaviour {
         yield break;
     }
 
-    /*private IEnumerator Examples()
-    {
-        //  Analyze tone
-        if (!_toneAnalyzer.GetToneAnalyze(OnGetToneAnalyze, OnFail, _stringToTestTone))
-            Log.Debug("ExampleToneAnalyzer.Examples()", "Failed to analyze!");
-
-        while (!_analyzeToneTested)
-            yield return null;
-
-        Log.Debug("ExampleToneAnalyzer.Examples()", "Tone analyzer examples complete.");
-    }*/
-
     public void OnGetToneAnalyze(ToneAnalyzerResponse resp, Dictionary<string, object> customData)
     {
         Log.Debug("ExampleToneAnalyzer.OnGetToneAnalyze()", "{0}", customData["json"].ToString());
@@ -206,7 +190,6 @@ public class PuzzleToneAnalyzer : MonoBehaviour {
         data = Regex.Replace(data, "\"tone_name\":", "");
         data = Regex.Replace(data, ",{", "}:{") + "}";
         emotion.text = data;
-        _analyzeToneTested = true;
     }
 
     private void OnFail(RESTConnector.Error error, Dictionary<string, object> customData)

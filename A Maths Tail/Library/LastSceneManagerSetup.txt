@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Three Bears.unity
+- path: Assets/Multiplication Window.unity
   isLoaded: 1
   isActive: 1
