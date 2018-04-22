@@ -60,10 +60,27 @@ public class ChildScoreMenu : MonoBehaviour {
     public void GenerateAllCategories()
     {
         List<float> categories = new List<float>();
-        categories.Add((scores[0] + scores[1] + scores[2] + scores[3]) / 4);
+        //Count the number of number puzzles which do not equate to zero
+        int numNotZero = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            if (scores[i] != 0)
+            {
+                numNotZero++;
+            }
+        }
+        categories.Add((scores[0] + scores[1] + scores[2] + scores[3]) / numNotZero);
         categories.Add(scores[4]);
         categories.Add(scores[5]);
-        categories.Add((scores[6] + scores[7] + scores[8]) / 3);
+        numNotZero = 0;
+        for (int i = 6; i < 9; i++)
+        {
+            if (scores[i] != 0)
+            {
+                numNotZero++;
+            }
+        }
+        categories.Add((scores[6] + scores[7] + scores[8]) / numNotZero);
         categories.Add(scores[9]);
         categories.Add(scores[10]);
         categories.Add(scores[11]);

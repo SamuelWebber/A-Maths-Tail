@@ -151,8 +151,8 @@ public class ReadingPuzzle1 : MonoBehaviour {
     //Change to the next scene in Build
     public void ChangeScene()
     {
-        if (SceneManager.GetActiveScene().name.Contains("Final")) {
-            speechToText.StopRecording();
+        speechToText.StopRecording();
+        if (SceneManager.GetActiveScene().name.Contains("Final")) {    
             MainMenu();
             return;
         }

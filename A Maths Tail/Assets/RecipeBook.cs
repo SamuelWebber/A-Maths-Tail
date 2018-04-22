@@ -219,6 +219,7 @@ public class RecipeBook : MonoBehaviour {
     //Change to next scene in the current build
     public void ChangeScene()
     {
+        toneAnalyzer.StopRecording();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

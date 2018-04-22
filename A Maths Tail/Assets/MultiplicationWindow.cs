@@ -185,6 +185,7 @@ public class MultiplicationWindow : MonoBehaviour {
     //Change to next scene in build
     public void ChangeScene()
     {
+        toneAnalyzer.StopRecording();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -197,6 +198,7 @@ public class MultiplicationWindow : MonoBehaviour {
     //Take the user to the main menu
     public void MainMenu()
     {
+        toneAnalyzer.StopRecording();
         SceneManager.LoadScene("Main Menu");
     }
 }

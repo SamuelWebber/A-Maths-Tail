@@ -95,7 +95,6 @@ public class KingsCastle : MonoBehaviour {
             }
             else
             {
-                toneAnalyzer.StopRecording();
                 ChangeScene();
             }
         }
@@ -262,7 +261,6 @@ public class KingsCastle : MonoBehaviour {
             yield return website3;
             Debug.Log("updated" + website3.text);
         }
-        toneAnalyzer.StopRecording();
         ChangeScene();
     }
 

@@ -185,6 +185,7 @@ public class WallBuilding : MonoBehaviour {
     //Change to the next scene in the build
     public void ChangeScene()
     {
+        toneAnalyzer.StopRecording();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -197,6 +198,7 @@ public class WallBuilding : MonoBehaviour {
     //Take user to the main menu
     public void MainMenu()
     {
+        toneAnalyzer.StopRecording();
         SceneManager.LoadScene("Main Menu");
     }
 }

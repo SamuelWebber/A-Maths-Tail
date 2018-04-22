@@ -273,7 +273,6 @@ public class ToyShop : MonoBehaviour {
             yield return website3;
             Debug.Log("updated" + website3.text);
         }
-        toneAnalyzer.StopRecording();
         ChangeScene();
     }
 

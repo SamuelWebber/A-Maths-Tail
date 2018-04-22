@@ -213,7 +213,6 @@ public class EscapeTheTower : MonoBehaviour {
             yield return website3;
             Debug.Log("updated" + website3.text);
         }
-        toneAnalyzer.StopRecording();
         ChangeScene();
     }
 
@@ -236,6 +235,7 @@ public class EscapeTheTower : MonoBehaviour {
     //Change the scene to the next scene in build
     public void ChangeScene()
     {
+        toneAnalyzer.StopRecording();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

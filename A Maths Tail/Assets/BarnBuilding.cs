@@ -213,6 +213,7 @@ public class BarnBuilding : MonoBehaviour {
     //Change scene to next scene in build
     public void ChangeScene()
     {
+        toneAnalyzer.StopRecording();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -225,6 +226,7 @@ public class BarnBuilding : MonoBehaviour {
     //Take the user back to the main menu
     public void MainMenu()
     {
+        toneAnalyzer.StopRecording();
         SceneManager.LoadScene("Main Menu");
     }
 }
