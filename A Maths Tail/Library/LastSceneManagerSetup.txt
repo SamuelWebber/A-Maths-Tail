@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Select Child.unity
+- path: Assets/Create Account.unity
   isLoaded: 1
   isActive: 1
